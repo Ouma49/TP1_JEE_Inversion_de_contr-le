@@ -9,7 +9,7 @@ public class PresSpringAnnotation {
 
     public static void main(String[] args) {
 
-        ApplicationContext context = new AnnotationConfigApplicationContext("dao","metier");// specifiez les packages base
+        ApplicationContext context = new AnnotationConfigApplicationContext("ext","metier","dao");// specifiez les packages base
         IMetier metier = context.getBean(IMetier.class);
         System.out.println("RES = " + metier.calcul());
 
